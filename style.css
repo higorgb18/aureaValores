@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --font-primary: "Baloo Da 2", serif;
+    --font-secundary:  "Josefin Slab", serif;
+    --font-action: "Mulish", serif;
+}
+    
+.conhecimentos{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(8, 6rem);
+    row-gap: 1.5rem;
+}
+
+.conhecimento:nth-child(1) {
+    grid-column: 3 / 8;
+    grid-row: 2 / 4;
+}
+
+.conhecimento:nth-child(2) {
+    grid-column: 2 / 7;
+    grid-row: 4 / 6;
+}
+
+.conhecimento:nth-child(3) {
+    grid-column: 4 / 10;
+    grid-row: 6 / -1;
+}
+
+.conhecimento:nth-child(4) {
+    grid-column: 14 / 20;
+    grid-row: 2 /  4;
+}
+
+.conhecimento:nth-child(5) {
+    grid-column: 15 / 20;
+    grid-row: 4 / 6;
+}
+
+.conhecimento:nth-child(6) {
+    grid-column: 13 / 19;
+    grid-row: 6 / -1;
+}
+
+.conhecimento:nth-child(7) {
+    grid-column: 8 / 14;
+    grid-row: 1 / 5;
+}
+
+.sessao-conhecimentos{
+    background-color: #f5f5f5;
+}
+
+.sessao-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.sessao-header h1 {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: #000;
+    border-bottom: solid 3px #dbb826;
+    margin-bottom: 1.5rem;
+}
+
+.conhecimento-header{
+    display: flex;
+    align-items: center;
+    color: #3d3d3d;
+}
+
+.conhecimento-header i{
+    font-size: 2.5rem;
+}
+
+.conhecimento-header h3{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+h3::first-letter {
+    font-size: 130%;
+    color: #dbb826;
+}
+
+.conhecimento-text{
+    font-family: Roboto;
+    color:#000;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.conhecimentos-img-wrapper{
+    grid-column: 5 / 12;
+    grid-row: 3 / 6;
+    width: 100%;
+}
+
+.conhecimentos-img-wrapper img{
+    grid-column: 7 / 9;
+    grid-row: 3 / 6;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media(max-width: 980px){
+    html {
+        font-size:68.75%;
+    }
+    
+    .conhecimento:nth-child(3) {
+        grid-column: 4 / 10;
+        grid-row: 6 / -1;
+    }
+    .conhecimento:nth-child(6) {
+        grid-column: 12 / 19;
+        grid-row: 6 / -1;
+    }
+
+}
+
+@media(max-width: 680px){
+    .conhecimento-text {
+        font-size: 1.3rem;
+    }
+
+    .conhecimento {
+        padding: 1rem
+    }
+
+    .conhecimentos-img-wrapper {
+        display: none;
+    }
+
+    .conhecimentos {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    #apaixonado {
+        order: 1;
+    }
+
+    #unido {
+        order: 2;
+    }
+
+    #responsavel {
+        order: 3;
+    }
+
+    #empatico {
+        order: 4;
+    }
+
+    #audacioso {
+        order: 5;
+    }
+
+    #notavel {
+        order: 6;
+    }
+
+    #obstinado {
+        order: 7;
+    }
+}
+
